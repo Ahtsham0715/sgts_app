@@ -42,6 +42,7 @@ dependencies:
   another_flushbar: any
   provider: any
   google_fonts: any
+  carousel_slider: any
 
 dev_dependencies:
   flutter_test:
