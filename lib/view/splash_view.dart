@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sgts_app/res/color.dart';
+import 'package:sgts_app/res/font_family.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -18,8 +20,11 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.whiteColor,
+        image: DecorationImage(
+            image: AssetImage('assets/images/splash_bg.png'),
+            alignment: Alignment.topLeft),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,
@@ -29,10 +34,18 @@ class _SplashViewState extends State<SplashView> {
           Image.asset(
             'assets/images/logo.png',
           ),
-          Text(
-            'SRI GANESH TILE &\nSANITARYWARES',
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headline4,
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Text(
+              'Sri Ganesh Tile &\nSanitarywares',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.mPlus1p(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.blackColor,
+                  fontSize: 30.0,
+                  wordSpacing: 1,
+                  textStyle: Theme.of(context).textTheme.headlineLarge),
+            ),
           ),
         ],
       ),
