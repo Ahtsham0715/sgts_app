@@ -3,6 +3,7 @@ import 'package:sgts_app/utils/routes/routes_name.dart';
 import 'package:sgts_app/view/brands_view.dart';
 import 'package:sgts_app/view/category_view.dart';
 import 'package:sgts_app/view/home_screen.dart';
+import 'package:sgts_app/view/products_view.dart';
 import 'package:sgts_app/view/splash_view.dart';
 
 class Routes {
@@ -19,6 +20,10 @@ class Routes {
       case RoutesName.brands:
         return MaterialPageRoute(
             builder: (BuildContext context) => const BrandsView());
+
+      case RoutesName.products:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const ProductsView());
 
       case RoutesName.category:
         return MaterialPageRoute(
