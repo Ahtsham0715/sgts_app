@@ -22,7 +22,9 @@ class Routes {
 
       case RoutesName.category:
         return MaterialPageRoute(
-            builder: (BuildContext context) => const CategoryView());
+            builder: (BuildContext context) => CategoryView(
+                  args: settings.arguments as Map,
+                ));
 
       // case RoutesName.login:
       //   return MaterialPageRoute(builder: (BuildContext context) => const LoginView());
