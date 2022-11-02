@@ -143,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           const Padding(
                             padding: EdgeInsets.only(bottom: 5.0),
                             child: CircleAvatar(
-                              // radius: 30.0,
+                              radius: 30.0,
                               backgroundColor: AppColors.yellowColor,
                               foregroundImage: NetworkImage(
                                 'https://media.istockphoto.com/photos/porcelain-stoneware-tiles-in-store-picture-id1312700805?k=20&m=1312700805&s=612x612&w=0&h=u6HRv_43aglQYNuU1pyJE9SRL-o7QbwkHIGZMh3Uqsc=',
