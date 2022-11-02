@@ -3,9 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sgts_app/res/color.dart';
-import 'package:sgts_app/res/font_family.dart';
 import 'package:sgts_app/utils/routes/routes_name.dart';
-import 'package:sgts_app/view/home_screen.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);

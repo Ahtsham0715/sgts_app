@@ -119,6 +119,59 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: height * 0.11,
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: 15,
+                itemBuilder: (context, index) {
+                  return SizedBox(
+                    height: height * 0.11,
+                    width: width * 0.225,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 5.0),
+                          child: CircleAvatar(
+                            // radius: 30.0,
+                            backgroundColor: AppColors.yellowColor,
+                            foregroundImage: NetworkImage(
+                              'https://media.istockphoto.com/photos/porcelain-stoneware-tiles-in-store-picture-id1312700805?k=20&m=1312700805&s=612x612&w=0&h=u6HRv_43aglQYNuU1pyJE9SRL-o7QbwkHIGZMh3Uqsc=',
+                            ),
+                            child: Icon(
+                              Icons.category,
+                              size: 25.0,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            'Kitchen Sinks',
+                            textAlign: TextAlign.center,
+                            softWrap: true,
+                            maxLines: 2,
+                            overflow: TextOverflow.visible,
+                            style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.blackColor,
+                                fontSize: 10.0,
+                                wordSpacing: 0,
+                                textBaseline: TextBaseline.alphabetic,
+                                textStyle:
+                                    Theme.of(context).textTheme.headline4),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
             Stack(
               alignment: AlignmentDirectional.bottomCenter,
               children: [
@@ -141,10 +194,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                       color: AppColors.greyColor,
                       borderRadius: BorderRadius.circular(10.0),
-                      image: const DecorationImage(
+                      image: DecorationImage(
                           fit: BoxFit.fill,
                           image: NetworkImage(
-                            'https://media.istockphoto.com/photos/porcelain-stoneware-tiles-in-store-picture-id1312700805?k=20&m=1312700805&s=612x612&w=0&h=u6HRv_43aglQYNuU1pyJE9SRL-o7QbwkHIGZMh3Uqsc=',
+                            imgList[itemIndex].toString(),
                           )),
                     ),
                     // child: Text(itemIndex.toString()),
@@ -189,6 +242,32 @@ class _HomeScreenState extends State<HomeScreen> {
                     wordSpacing: 1,
                     textStyle: Theme.of(context).textTheme.headlineLarge),
               ),
+            ),
+            GridView.builder(
+              padding: const EdgeInsets.all(15.0),
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 15.0,
+                mainAxisSpacing: 15.0,
+              ),
+              itemCount: 7,
+              itemBuilder: (context, index1) {
+                return InkWell(
+                  onTap: () {},
+                  child: Container(
+                    // margin: const EdgeInsets.all(2.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.blueGrey.withOpacity(0.5),
+                      image: DecorationImage(
+                          image: NetworkImage(imgList[2].toString()),
+                          fit: BoxFit.fill),
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),
