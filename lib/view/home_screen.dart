@@ -33,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leadingWidth: 35.0,
           elevation: 0.0,
           toolbarHeight: height * 0.085,
           centerTitle: false,
