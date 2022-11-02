@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sgts_app/res/color.dart';
+import 'package:sgts_app/utils/routes/routes_name.dart';
 
 class BrandsView extends StatefulWidget {
   const BrandsView({super.key});
@@ -99,7 +100,10 @@ class _BrandsViewState extends State<BrandsView> {
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () {
-                // Navigator.pushNamed(context, RoutesName.brands);
+                Navigator.pushNamed(context, RoutesName.category, arguments: {
+                  'name': brandslist[index]['name'].toString(),
+                  'image': brandslist[index]['image'].toString(),
+                });
               },
               child: Container(
                 height: height * 0.1,
