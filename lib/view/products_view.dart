@@ -89,7 +89,7 @@ class _ProductsViewState extends State<ProductsView> {
             crossAxisCount: 2,
             crossAxisSpacing: 20.0,
             mainAxisSpacing: 20.0,
-            childAspectRatio: 0.8,
+            childAspectRatio: 0.7,
           ),
           itemCount: productslist.length,
           itemBuilder: (context, index) {

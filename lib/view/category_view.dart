@@ -141,7 +141,7 @@ class _CategoryViewState extends State<CategoryView> {
             crossAxisCount: 2,
             crossAxisSpacing: 20.0,
             mainAxisSpacing: 15.0,
-            childAspectRatio: 0.8,
+            childAspectRatio: 0.7,
           ),
           itemCount: subcatslist.length,
           itemBuilder: (context, index) {
