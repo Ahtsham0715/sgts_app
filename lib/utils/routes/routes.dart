@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sgts_app/utils/routes/routes_name.dart';
+import 'package:sgts_app/view/brands_view.dart';
 import 'package:sgts_app/view/home_screen.dart';
 import 'package:sgts_app/view/splash_view.dart';
 
@@ -13,6 +14,10 @@ class Routes {
       case RoutesName.home:
         return MaterialPageRoute(
             builder: (BuildContext context) => const HomeScreen());
+
+      case RoutesName.brands:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const BrandsView());
 
       // case RoutesName.login:
       //   return MaterialPageRoute(builder: (BuildContext context) => const LoginView());
