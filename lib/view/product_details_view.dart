@@ -220,7 +220,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
               textAlign: TextAlign.left,
               style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w700,
-                  color: AppColors.blackColor,
+                  color: AppColors.blueColor,
                   fontSize: 32.0,
                   wordSpacing: 0,
                   textStyle: Theme.of(context).textTheme.headline4),
@@ -271,7 +271,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
               // width: 50.0,
               height: height * 0.07,
               margin: EdgeInsets.only(
-                  right: width * 0.5, top: 5.0, bottom: 5.0, left: 20.0),
+                  right: width * 0.5, top: 20.0, bottom: 5.0, left: 20.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
                 color: AppColors.blueColor,
@@ -299,7 +299,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
           ),
           Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 25.0),
             child: ButtonBar(
               alignment: MainAxisAlignment.start,
               children: [
