@@ -23,5 +23,5 @@ class UnauthorisedException extends AppException {
 }
 
 class InvalidInputException extends AppException {
-  InvalidInputException([String? message]) : super(message, 'Invalid Inpit');
+  InvalidInputException([String? message]) : super(message, 'Invalid Input');
 }

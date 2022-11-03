@@ -5,14 +5,14 @@ import 'package:sgts_app/res/app_url.dart';
 class HomeRepository {
   BaseApiServices _apiServices = NetworkApiService();
 
-  Future fetchMoviesList() async {
-    try {
-      dynamic response =
-          await _apiServices.getGetApiResponse(AppUrl.moviesListEndPoint);
-      // return response = MovieListModel.fromJson(response);
+  // Future fetchMoviesList() async {
+  //   try {
+  //     dynamic response =
+  //         await _apiServices.getGetApiResponse(AppUrl.moviesListEndPoint);
+  //     // return response = MovieListModel.fromJson(response);
 
-    } catch (e) {
-      throw e;
-    }
-  }
+  //   } catch (e) {
+  //     throw e;
+  //   }
+  // }
 }
