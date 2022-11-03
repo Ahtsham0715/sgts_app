@@ -14,7 +14,7 @@ class ProductDetailsView extends StatefulWidget {
 
 class _ProductDetailsViewState extends State<ProductDetailsView> {
   CarouselController buttonCarouselController = CarouselController();
-  ValueNotifier<int> _current = ValueNotifier(0);
+  final ValueNotifier<int> _current = ValueNotifier(0);
   final List<String> imgList = [
     'assets/images/c1.png',
     'assets/images/c2.png',

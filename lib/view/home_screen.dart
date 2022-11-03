@@ -30,255 +30,253 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          leadingWidth: 35.0,
-          elevation: 0.0,
-          toolbarHeight: height * 0.085,
-          centerTitle: false,
-          title: SizedBox(
-            height: height * 0.06,
-            child: Row(
-              children: [
-                Image.asset(
-                  'assets/images/logo.png',
+    return Scaffold(
+      appBar: AppBar(
+        leadingWidth: 35.0,
+        elevation: 0.0,
+        toolbarHeight: height * 0.085,
+        centerTitle: false,
+        title: SizedBox(
+          height: height * 0.06,
+          child: Row(
+            children: [
+              Image.asset(
+                'assets/images/logo.png',
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Text(
+                  'Sri Ganesh Tile\n& Sanitarywares',
+                  textAlign: TextAlign.left,
+                  style: GoogleFonts.mPlus1p(
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.blackColor,
+                      fontSize: 16.0,
+                      wordSpacing: 0,
+                      textStyle: Theme.of(context).textTheme.headline4),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
-                  child: Text(
-                    'Sri Ganesh Tile\n& Sanitarywares',
-                    textAlign: TextAlign.left,
-                    style: GoogleFonts.mPlus1p(
-                        fontWeight: FontWeight.w800,
-                        color: AppColors.blackColor,
-                        fontSize: 16.0,
-                        wordSpacing: 0,
-                        textStyle: Theme.of(context).textTheme.headline4),
-                  ),
-                ),
-              ],
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.phone_outlined,
             ),
           ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.phone_outlined,
-              ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.location_on_outlined,
             ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.location_on_outlined,
-              ),
-            ),
-          ],
-        ),
-        drawer: Drawer(),
-        body: ListView(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextFormField(
-                controller: searchController,
-                decoration: InputDecoration(
-                  hintText: 'Search anything... ',
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: AppColors.blackColor,
-                    ),
-                    borderRadius: BorderRadius.circular(10.0),
+          ),
+        ],
+      ),
+      drawer: Drawer(),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextFormField(
+              controller: searchController,
+              decoration: InputDecoration(
+                hintText: 'Search anything... ',
+                border: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: AppColors.blackColor,
                   ),
-                  prefixIcon: const Icon(Icons.search_outlined),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
+                prefixIcon: const Icon(Icons.search_outlined),
               ),
             ),
-            ListTile(
-              isThreeLine: false,
-              // minVerticalPadding: 2,
-              dense: false,
-              leading: Text(
-                'Categories',
+          ),
+          ListTile(
+            isThreeLine: false,
+            // minVerticalPadding: 2,
+            dense: false,
+            leading: Text(
+              'Categories',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.mPlus1p(
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.blackColor,
+                  fontSize: 16.0,
+                  wordSpacing: 1,
+                  textStyle: Theme.of(context).textTheme.headlineLarge),
+            ),
+            trailing: TextButton(
+              onPressed: () {},
+              child: Text(
+                'View All',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.mPlus1p(
                     fontWeight: FontWeight.w800,
-                    color: AppColors.blackColor,
-                    fontSize: 16.0,
-                    wordSpacing: 1,
-                    textStyle: Theme.of(context).textTheme.headlineLarge),
-              ),
-              trailing: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'View All',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.mPlus1p(
-                      fontWeight: FontWeight.w800,
-                      color: AppColors.blueColor,
-                      fontSize: 12.0,
-                      wordSpacing: 1,
-                      textStyle: Theme.of(context).textTheme.headlineLarge),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: height * 0.11,
-              child: ListView.builder(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: 15,
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {},
-                    child: SizedBox(
-                      height: height * 0.11,
-                      width: width * 0.225,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.only(bottom: 5.0),
-                            child: CircleAvatar(
-                              radius: 30.0,
-                              backgroundColor: AppColors.greyColor,
-                              foregroundImage: NetworkImage(
-                                'https://media.istockphoto.com/photos/porcelain-stoneware-tiles-in-store-picture-id1312700805?k=20&m=1312700805&s=612x612&w=0&h=u6HRv_43aglQYNuU1pyJE9SRL-o7QbwkHIGZMh3Uqsc=',
-                              ),
-                              child: Icon(
-                                Icons.category,
-                                size: 25.0,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Text(
-                              'Kitchen Sinks',
-                              textAlign: TextAlign.center,
-                              softWrap: true,
-                              maxLines: 2,
-                              overflow: TextOverflow.visible,
-                              style: GoogleFonts.montserrat(
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.blackColor,
-                                  fontSize: 10.0,
-                                  wordSpacing: 0,
-                                  textBaseline: TextBaseline.alphabetic,
-                                  textStyle:
-                                      Theme.of(context).textTheme.headline4),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-            Stack(
-              alignment: AlignmentDirectional.bottomCenter,
-              children: [
-                CarouselSlider.builder(
-                  itemCount: imgList.length,
-                  carouselController: buttonCarouselController,
-                  options: CarouselOptions(
-                    enableInfiniteScroll: false,
-                    autoPlay: false,
-                    enlargeCenterPage: true,
-                    onPageChanged: (index, reason) {
-                      _current.value = index;
-                    },
-                  ),
-                  itemBuilder: (BuildContext context, int itemIndex,
-                          int pageViewIndex) =>
-                      Container(
-                    height: height * 0.2,
-                    width: width,
-                    decoration: BoxDecoration(
-                      color: AppColors.greyColor,
-                      borderRadius: BorderRadius.circular(10.0),
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: NetworkImage(
-                            imgList[itemIndex].toString(),
-                          )),
-                    ),
-                    // child: Text(itemIndex.toString()),
-                  ),
-                ),
-                ValueListenableBuilder(
-                    valueListenable: _current,
-                    builder: (context, val, child) {
-                      return Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: imgList.asMap().entries.map((entry) {
-                          return GestureDetector(
-                            onTap: () => buttonCarouselController
-                                .animateToPage(entry.key),
-                            child: Container(
-                              width: 12.0,
-                              height: 12.0,
-                              margin: const EdgeInsets.symmetric(
-                                  vertical: 8.0, horizontal: 4.0),
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: val == entry.key
-                                    ? AppColors.yellowColor
-                                    : AppColors.whiteColor,
-                              ),
-                            ),
-                          );
-                        }).toList(),
-                      );
-                    }),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 15),
-              child: Text(
-                'Our Brands',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.montserrat(
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.blackColor,
-                    fontSize: 16.0,
+                    color: AppColors.blueColor,
+                    fontSize: 12.0,
                     wordSpacing: 1,
                     textStyle: Theme.of(context).textTheme.headlineLarge),
               ),
             ),
-            GridView.builder(
-              padding: const EdgeInsets.all(15.0),
-              physics: const NeverScrollableScrollPhysics(),
+          ),
+          SizedBox(
+            height: height * 0.11,
+            child: ListView.builder(
               shrinkWrap: true,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 15.0,
-                mainAxisSpacing: 15.0,
-              ),
-              itemCount: 7,
+              scrollDirection: Axis.horizontal,
+              itemCount: 15,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, RoutesName.brands);
-                  },
-                  child: Container(
-                    // margin: const EdgeInsets.all(2.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: AppColors.whiteColor,
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/p${index + 1}.png'),
-                          fit: BoxFit.fill),
+                  onTap: () {},
+                  child: SizedBox(
+                    height: height * 0.11,
+                    width: width * 0.225,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 5.0),
+                          child: CircleAvatar(
+                            radius: 30.0,
+                            backgroundColor: AppColors.greyColor,
+                            foregroundImage: NetworkImage(
+                              'https://media.istockphoto.com/photos/porcelain-stoneware-tiles-in-store-picture-id1312700805?k=20&m=1312700805&s=612x612&w=0&h=u6HRv_43aglQYNuU1pyJE9SRL-o7QbwkHIGZMh3Uqsc=',
+                            ),
+                            child: Icon(
+                              Icons.category,
+                              size: 25.0,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            'Kitchen Sinks',
+                            textAlign: TextAlign.center,
+                            softWrap: true,
+                            maxLines: 2,
+                            overflow: TextOverflow.visible,
+                            style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.blackColor,
+                                fontSize: 10.0,
+                                wordSpacing: 0,
+                                textBaseline: TextBaseline.alphabetic,
+                                textStyle:
+                                    Theme.of(context).textTheme.headline4),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 );
               },
             ),
-          ],
-        ),
+          ),
+          Stack(
+            alignment: AlignmentDirectional.bottomCenter,
+            children: [
+              CarouselSlider.builder(
+                itemCount: imgList.length,
+                carouselController: buttonCarouselController,
+                options: CarouselOptions(
+                  enableInfiniteScroll: false,
+                  autoPlay: false,
+                  enlargeCenterPage: true,
+                  onPageChanged: (index, reason) {
+                    _current.value = index;
+                  },
+                ),
+                itemBuilder:
+                    (BuildContext context, int itemIndex, int pageViewIndex) =>
+                        Container(
+                  height: height * 0.2,
+                  width: width,
+                  decoration: BoxDecoration(
+                    color: AppColors.greyColor,
+                    borderRadius: BorderRadius.circular(10.0),
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: NetworkImage(
+                          imgList[itemIndex].toString(),
+                        )),
+                  ),
+                  // child: Text(itemIndex.toString()),
+                ),
+              ),
+              ValueListenableBuilder(
+                  valueListenable: _current,
+                  builder: (context, val, child) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: imgList.asMap().entries.map((entry) {
+                        return GestureDetector(
+                          onTap: () =>
+                              buttonCarouselController.animateToPage(entry.key),
+                          child: Container(
+                            width: 12.0,
+                            height: 12.0,
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 8.0, horizontal: 4.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: val == entry.key
+                                  ? AppColors.yellowColor
+                                  : AppColors.whiteColor,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    );
+                  }),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15),
+            child: Text(
+              'Our Brands',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.blackColor,
+                  fontSize: 16.0,
+                  wordSpacing: 1,
+                  textStyle: Theme.of(context).textTheme.headlineLarge),
+            ),
+          ),
+          GridView.builder(
+            padding: const EdgeInsets.all(15.0),
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 15.0,
+              mainAxisSpacing: 15.0,
+            ),
+            itemCount: 7,
+            itemBuilder: (context, index) {
+              return InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, RoutesName.brands);
+                },
+                child: Container(
+                  // margin: const EdgeInsets.all(2.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: AppColors.whiteColor,
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/p${index + 1}.png'),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
