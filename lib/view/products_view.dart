@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sgts_app/res/color.dart';
+import 'package:sgts_app/utils/routes/routes_name.dart';
 
 class ProductsView extends StatefulWidget {
   const ProductsView({super.key});
@@ -94,7 +95,12 @@ class _ProductsViewState extends State<ProductsView> {
           itemCount: productslist.length,
           itemBuilder: (context, index) {
             return InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RoutesName.productdetails,
+                    arguments: {
+                      'name': productslist[index]['name'].toString(),
+                    });
+              },
               child: Column(
                 children: [
                   SizedBox(

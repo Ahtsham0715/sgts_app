@@ -10,4 +10,5 @@ class RoutesName {
   static const String brands = 'brands_view';
   static const String category = 'category_view';
   static const String products = 'products_view';
+  static const String productdetails = 'product_details_view';
 }
