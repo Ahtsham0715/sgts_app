@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         leadingWidth: 35.0,
         elevation: 0.0,
-        toolbarHeight: height * 0.085,
+        toolbarHeight: height * 0.09,
         centerTitle: false,
         title: SizedBox(
           height: height * 0.06,
