@@ -288,7 +288,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                     textAlign: TextAlign.left,
                     style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w700,
-                        color: AppColors.blackColor,
+                        color: AppColors.whiteColor,
                         fontSize: 16.0,
                         wordSpacing: 0,
                         textStyle: Theme.of(context).textTheme.headline4),
